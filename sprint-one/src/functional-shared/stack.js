@@ -4,19 +4,16 @@ var Stack = function() {
   var obj ={
     count : 0
   };
-
-  obj.push = stackMethods.push;
-  obj.pop = stackMethods.pop;
-  obj.size = stackMethods.size;
+  _.extend(obj, stackMethods);
   return obj;
 };
 
 var stackMethods = {
-  push : function(input){
+  push: function(input){
     this[this.count+1] = input;
     this.count++;
   },
-  pop : function(){
+  pop: function(){
     var temp = this[this.count];
     delete this[this.count];
     if (this.count > 0){
@@ -24,7 +21,7 @@ var stackMethods = {
     }
     return temp;
   },
-  size : function(){
+  size: function(){
     return this.count;
   }
 };
