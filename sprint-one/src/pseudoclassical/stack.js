@@ -6,17 +6,17 @@ var Stack = function() {
 
 
 Stack.prototype.push = function(input) {
-    this[this.count] = input;
-    this.count++;
+  this[this.count] = input;
+  this.count++;
 };
 Stack.prototype.pop = function() {
-    var temp = this[this.count - 1];
-    delete this[this.count - 1];
-    if(this.count > 0){
-      this.count--;
-    }
-    return temp;
+  var temp = this[this.count - 1];
+  delete this[this.count - 1];
+  if(this.count > 0){
+    this.count--;
+  }
+  return temp;
 };
 Stack.prototype.size = function() {
-    return this.count;
+  return this.count;
 };

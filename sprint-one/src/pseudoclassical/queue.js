@@ -4,13 +4,13 @@ var Queue = function() {
   this.count = 0;
 };
 
-Queue.prototype.enqueue = function(input){
+Queue.prototype.enqueue = function(input) {
   this[this.count] = input;
   this.count++;
 };
-Queue.prototype.dequeue = function(){
+Queue.prototype.dequeue = function() {
   var keys = Object.keys(this);
-  var numKeys = keys.filter(function(item){
+  var numKeys = keys.filter(function(item) {
     return !isNaN(parseInt(item));
   });
   var smallest = Math.min(...numKeys);
@@ -18,6 +18,6 @@ Queue.prototype.dequeue = function(){
   delete this[smallest];
   return temp;
 };
-Queue.prototype.size = function(){
+Queue.prototype.size = function() {
   return Object.keys(this).length - 1;
 };
