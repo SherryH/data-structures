@@ -12,7 +12,7 @@ Stack.prototype.push = function(input) {
 Stack.prototype.pop = function() {
   var temp = this[this.count - 1];
   delete this[this.count - 1];
-  if(this.count > 0){
+  if (this.count > 0) {
     this.count--;
   }
   return temp;

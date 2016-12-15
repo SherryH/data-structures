@@ -51,5 +51,26 @@ describe('linkedList', function() {
     expect(linkedList.contains(4)).to.equal(false);
   });
 
-  // add more tests here to test the functionality of linkedList
+  it('STUDENT TEST: should return false when calling contains on an empty list', function() {
+    expect(linkedList.contains(1)).to.equal(false);
+  });
+
+  it('STUDENT TEST: should have the same head and tail if only one value in the list', function() {
+    linkedList.addToTail(8);
+    expect(linkedList.head).to.equal(linkedList.tail);
+  });
+
+  it('STUDENT TEST: should return true when calling contains after calling removeHead given the value of head is identical to another node in the list', function() {
+    linkedList.addToTail(1);
+    linkedList.addToTail(1);
+    linkedList.addToTail(2);
+    linkedList.removeHead();
+    expect(linkedList.contains(1)).to.equal(true);
+  });
+
+  it('STUDENT TEST: should have a next value of null when the current node is tail', function() {
+    linkedList.addToTail(8);
+    expect(linkedList.tail.next).to.equal(null);
+  });
+
 });
