@@ -12,7 +12,7 @@ setPrototype.add = function(item) {
 
 setPrototype.contains = function(item) {
   if (this._storage[item]) {
-    return true
+    return true;
   }
   return false;
 };
