@@ -26,6 +26,7 @@ BinarySearchTree.prototype.insert = function(value) {
   };
   findBranch(this);
 };
+//time complexity: O(logn)
 
 BinarySearchTree.prototype.contains = function(value) {
   var isPresent = false;
@@ -45,6 +46,7 @@ BinarySearchTree.prototype.contains = function(value) {
   findNode(this);
   return isPresent;
 };
+//time complexity: O(logn)
 
 BinarySearchTree.prototype.depthFirstLog = function(cb) {
   var cycleNode = function(currentNode) {
@@ -58,6 +60,8 @@ BinarySearchTree.prototype.depthFirstLog = function(cb) {
   };
   cycleNode(this);
 };
+//time complexity: O(n)
+
 
 
 /*

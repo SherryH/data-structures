@@ -3,7 +3,7 @@ var Tree = function(value) {
   newTree.value = value;
 
   // your code here
-  newTree.children = [];  // fix me
+  newTree.children = [];
   newTree.addChild = treeMethods.addChild;
   newTree.contains = treeMethods.contains;
 
@@ -16,6 +16,7 @@ treeMethods.addChild = function(value) {
   var newChild = Tree(value);
   this.children.push(newChild);
 };
+//time complexity: Amortized O(1)
 
 treeMethods.contains = function(target) {
   var answer = false;
@@ -33,6 +34,7 @@ treeMethods.contains = function(target) {
   testChildren(this);
   return answer;
 };
+//time complexity: O(1)
 
 
 /*

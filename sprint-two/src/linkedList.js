@@ -11,14 +11,15 @@ var LinkedList = function() {
       list.tail.next = n;
     }
     list.tail = n;
-
   };
+  //time complexity: O(1)
 
   list.removeHead = function() {
     var temp = list.head.value;
     list.head = list.head.next;
     return temp;
   };
+  //time complexity: O(1)
 
   list.contains = function(target) {
     var current = list.head;
@@ -35,9 +36,11 @@ var LinkedList = function() {
     }
     return contained;
   };
+  //time complexity: O(n)
 
   return list;
 };
+
 
 var Node = function(value) {
   var node = {};
