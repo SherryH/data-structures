@@ -41,4 +41,16 @@ describe('tree', function() {
     expect(tree.contains(8)).to.equal(true);
   });
 
+  it('STUDENT TEST: should be able to contain multiple children with the same value', function() {
+    tree.addChild(1);
+    tree.addChild(2);
+    tree.children[1].addChild(1);
+    expect(tree.children[0].value).to.equal(1);
+    expect(tree.children[1].children[0].value).to.equal(1);
+  });
+
+  it('STUDENT TEST: should be able to handle non-numerical children', function() {
+    tree.addChild('baby');
+    expect(tree.contains('baby')).to.equal(true);
+  });
 });
