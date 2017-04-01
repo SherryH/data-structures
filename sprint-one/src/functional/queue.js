@@ -28,3 +28,25 @@ var Queue = function() {
 
   return someInstance;
 };
+
+// // reimplment using array
+// var Queue = function() {
+//   var storage = [];
+//     if (!storage) {
+//       storage.length = 0;
+//     }
+
+//   storage.enqueue = function(val){
+//     storage.push(val);
+//   };
+
+//   storage.dequeue = function(){
+//     return storage.shift();
+//   };
+
+//   storage.size = function(){
+//     return storage.length;
+//   }
+
+//   return storage;
+// }

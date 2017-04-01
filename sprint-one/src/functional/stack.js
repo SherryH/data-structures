@@ -28,3 +28,18 @@ var Stack = function() {
 
   return someInstance;
 };
+
+//FILO, using array as internal storage
+// push, pop, size
+// var Stack = function() {
+//   storage = [];
+//   // storage array has its own push and pop methods
+//   storage.size = function() {
+//     var itemNum = 0;
+//     if(storage) {
+//       itemNum = storage.length;
+//     }
+//     return itemNum;
+//   }
+//   return storage;
+// };
